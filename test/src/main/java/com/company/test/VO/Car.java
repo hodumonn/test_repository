@@ -3,18 +3,19 @@ package com.company.test.VO;
 import java.util.Date;
 
 public class Car {
-	private int car_key;
+	private Integer car_key;
 	private String car_index;
 	private String car_name;
-	private char delete_yn;
+	private String delete_yn;
 	private Date reg_time;
 	private Date update_time;
 	private String config_data;
 	
-	public int getCar_key() {
+	
+	public Integer getCar_key() {
 		return car_key;
 	}
-	public void setCar_key(int car_key) {
+	public void setCar_key(Integer car_key) {
 		this.car_key = car_key;
 	}
 	public String getCar_index() {
@@ -29,10 +30,10 @@ public class Car {
 	public void setCar_name(String car_name) {
 		this.car_name = car_name;
 	}
-	public char getDelete_yn() {
+	public String getDelete_yn() {
 		return delete_yn;
 	}
-	public void setDelete_yn(char delete_yn) {
+	public void setDelete_yn(String delete_yn) {
 		this.delete_yn = delete_yn;
 	}
 	public Date getReg_time() {
@@ -53,11 +54,12 @@ public class Car {
 	public void setConfig_data(String config_data) {
 		this.config_data = config_data;
 	}
-	
 	@Override
 	public String toString() {
 		return "Car [car_key=" + car_key + ", car_index=" + car_index + ", car_name=" + car_name + ", delete_yn="
 				+ delete_yn + ", reg_time=" + reg_time + ", update_time=" + update_time + ", config_data=" + config_data
 				+ "]";
 	}
+	
+	
 }

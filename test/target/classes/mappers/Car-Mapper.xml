@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.company.test.Mapper.CarDao">
+
+	<insert id="insertCar" parameterType="com.company.test.VO.Car">
+		insert into Car
+		(car_index, car_name, delete_yn, reg_time, update_time)
+		values
+		(#{car_index}, #{car_name}, 'N', sysdate(), sysdate())
+	</insert>
+	
+	<select id="selectCarList" resultType="com.company.test.VO.Car">
+		select * from Car
+		where delete_yn = 'N'
+		order by car_key desc
+	</select>
+	
+	<update id="updateCar" parameterType="com.company.test.VO.Car">
+		update Car
+		set car_index = #{car_index}
+		, car_name = #{car_name}
+		, update_time = sysdate()
+		where car_key = #{car_key}
+	</update>
+	
+	<update id="deleteCar" parameterType="int">
+		update Car
+		set delete_yn = 'Y'
+		, update_time = sysdate()
+		where car_key = #{car_key}
+	</update>
+
+</mapper>

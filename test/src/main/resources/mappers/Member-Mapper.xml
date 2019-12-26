@@ -6,7 +6,7 @@
 <mapper namespace="com.company.test.Mapper.MemberMapper">
 
 	<insert id="join" parameterType="hashmap">
-		insert into test (name, id) value (#{name}, #{id})
+		insert into test (user_name) value (#{user_name})
 	</insert>
 	
 	<select id="chkId" parameterType="string" resultType="int">
