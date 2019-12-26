@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+	PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+	<configuration>
+	
+	</configuration>	
+	
+	<!--
+		 <typeAliases>태그를 통해 vo 클래스를 등록해 둘수 있다.
+		이렇게 등록을 하면 mapper.xml에서 VO 클래스를 mybatis-config.xml등록한 이름으로 사용 가능
+	 -->
